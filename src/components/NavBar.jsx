@@ -16,7 +16,7 @@ export default function NavBar({isLogin, setIsLogin, active, setActive}) {
   const navigation = isLogin ? [
     { name: 'Home', href: '/', current: active === "Home" ? true : false},
     { name: 'Feeds', href: '/feeds', current: active === "Feeds" ? true : false },
-    { name: 'Create Post', href: '/create-post', current: active === "Create Post" ? true : false },
+    // { name: 'Create Post', href: '/create-post', current: active === "Create Post" ? true : false },
     { name: 'Profile', href: '/chat', current: active === "Profile" ? true : false },
     { name: 'Events', href: '/events', current: active === "Events" ? true : false },
   ] : [
