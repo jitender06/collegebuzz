@@ -42,7 +42,7 @@ function App() {
           <Route path="/register" element={<Register setActive={setActive}/>}/>
           <Route path="/feeds" element={<PostFeeds Posts={Posts} setActive={setActive}/>}/>
           <Route path="/create-post" element={<CreatePost/>}/>
-          <Route path="/chat" element={<SocialMedia Posts={Posts} setActive={setActive} currentLogin={currentLogin}/>}/>
+          <Route path="/chat" element={<SocialMedia Posts={Posts} setActive={setActive} setIsLogin={setIsLogin} currentLogin={currentLogin}/>}/>
           <Route path="/profile" element={<Profile currentLogin={currentLogin}/>}/>
           <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/message" element={<Chat currentLogin={currentLogin}/>}/>

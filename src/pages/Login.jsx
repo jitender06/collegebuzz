@@ -36,8 +36,8 @@ export default function Login({allUsersData, isLogin, setIsLogin, setActive, set
             });
             setIsLogin(true);
             localStorage.setItem('isLogin', 'true');
-            setActive("Create Post")
-            navigate('/create-post');
+            setActive("Profile")
+            navigate('/chat');
         }else{
             toast("Email or password is wrong ");
         }
