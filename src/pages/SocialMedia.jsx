@@ -532,7 +532,7 @@ export default function SocialMedia({ Posts, setActive, setIsLogin, currentLogin
 
                         <div className="flex justify-center items-center gap-2 my-3">
                             <div className="font-semibold text-center mx-4">
-                                <p className="text-black">{Posts.length}</p>
+                                <p className="text-black">{Posts?.length ? Posts?.length : 0}</p>
                                 <span className="text-gray-400">Posts</span>
                             </div>
                             <div className="font-semibold text-center mx-4">

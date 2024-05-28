@@ -46,7 +46,7 @@ function App() {
           <Route path="/profile" element={<Profile currentLogin={currentLogin}/>}/>
           <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/message" element={<Chat currentLogin={currentLogin}/>}/>
-          <Route path="/events" element={<Events/>}/>
+          <Route path="/events" element={<Events setIsLogin={setIsLogin} setActive={setActive}/>}/>
         </Routes>
       <Footer/>
     </BrowserRouter>
