@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/logo.png' 
 
-export default function Login({allUsersData, isLogin, setIsLogin, setActive, setCurrentLogin}) {
+export default function Login({allUsersData, isLogin, setIsLogin, setActive, setCurrentLogin, setIsAdmin}) {
     const navigate = useNavigate();
     useEffect(() => {
         const loggedIn = localStorage.getItem('isLogin');
@@ -28,6 +28,10 @@ export default function Login({allUsersData, isLogin, setIsLogin, setActive, set
         const check = allUsersData.find((item) => item.email === data.email && item.password === data.password)
         setCurrentLogin(check)
         console.log(check,"::data check")
+        if(data.email == "collegebuzzadmin@gmail.com" && data.password == "admin@123") {
+            setIsAdmin(true);
+            navigate('/admin');
+        }
         if(check){
             toast("Login successful!");
             setData({

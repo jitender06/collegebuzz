@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import HomeVideo from '../assets/home.mp4'
 import Faq from './Faq'
 import Contact from './Contact/Contact'
+import Logo from '../assets/logo.png'
 
 export default function Home({setActive, isLogin}) {
     return (
@@ -12,7 +13,7 @@ export default function Home({setActive, isLogin}) {
                 <div className="relative z-30 p-5 text-2xl text-white bg-purple-300 bg-opacity-65 rounded-xl">
                 
                     {/* <!-- Announcement Banner --> */}
-                    <div className="flex justify-center">
+                    <div className="flex justify-center px-56">
                         <Link to={"/login"} className="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-neutral-800 dark:border-neutral-700 dark:hover:border-neutral-600 dark:text-neutral-200" >
                             PRO release - Join the community
                             <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-gray-200 font-semibold text-sm text-gray-600 dark:bg-neutral-700 dark:text-neutral-400">
@@ -24,15 +25,22 @@ export default function Home({setActive, isLogin}) {
 
                     {/* <!-- Title --> */}
                     <div className="mt-5 max-w-2xl text-center mx-auto">
-                        <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-                            Let's Build
-                            <span className="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Together</span>
+                        <h1 className="block font-bold text-gray-800 text-4xl md:text-3xl lg:text-4xl dark:text-neutral-200">
+                            <span className="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">College Buzz: </span>
+                        Your Campus, Your Connection, Your Voice 
                         </h1>
+                    </div>
+                    <div className='flex justify-center items-center'>
+                        <img
+                            className="h-36 w-auto"
+                            src={Logo}
+                            alt="Your Company"
+                        />
                     </div>
                     {/* <!-- End Title --> */}
 
                     <div className="mt-5 max-w-3xl text-center mx-auto">
-                        <p className="text-lg text-gray-800 dark:text-neutral-400"><span className='font-semibold'>College Buzz</span> 😎 Bridging Campus Connections. A unified chat platform for students and staff to engage, collaborate, and thrive together.</p>
+                        <p className="text-lg text-gray-800 dark:text-neutral-400"><span className='font-semibold'>College Buzz: </span> Your campus compass, pointing you to the fun. Don't miss a beat! College Buzz buzzes with the latest events, news, and insider tips for rocking your college experience. </p>
                     </div>
 
                     {/* <!-- Buttons --> */}
