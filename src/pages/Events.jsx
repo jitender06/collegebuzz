@@ -194,6 +194,9 @@ export default function Events({ setIsLogin, setActive }) {
                 <div className="mt-12">
                     <div className="mx-auto max-w-7xl px-2 py-5 sm:px-6 lg:px-8">
                         <Grid container spacing={2}>
+                            <Grid  item xs={12}>
+                            <p className='text-center text-3xl pb-16 font-bold underline'> Cultural Fest KALRAV 2024</p>
+                            </Grid>
                             {
                                 userData.map((item, index) => {
                                     return <Grid key={index} item xs={12} md={6} lg={4} className='flex items-center justify-center'>
