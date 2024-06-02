@@ -15,7 +15,7 @@ export default function Profile({ currentLogin }) {
                                         src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
                                         alt="" />
                                 </div>
-                                <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">{currentLogin.name}</h1>
+                                <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">{currentLogin?.name}</h1>
                                 <ul
                                     className="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                                     <li className="flex items-center py-3">
@@ -75,24 +75,24 @@ export default function Profile({ currentLogin }) {
                                     <div className="grid md:grid-cols-2 text-sm">
                                         <div className="grid grid-cols-2">
                                             <div className="px-4 py-2 font-semibold">Full Name</div>
-                                            <div className="px-4 py-2">{currentLogin.name}</div>
+                                            <div className="px-4 py-2">{currentLogin?.name}</div>
                                         </div>
                                         <div className="grid grid-cols-2">
                                             <div className="px-4 py-2 font-semibold">Gender</div>
-                                            <div className="px-4 py-2">{currentLogin.gender}</div>
+                                            <div className="px-4 py-2">{currentLogin?.gender}</div>
                                         </div>
                                         <div className="grid grid-cols-2">
                                             <div className="px-4 py-2 font-semibold">Contact No.</div>
-                                            <div className="px-4 py-2">+91{currentLogin.phone}</div>
+                                            <div className="px-4 py-2">+91{currentLogin?.phone}</div>
                                         </div>
                                         <div className="grid grid-cols-2">
                                             <div className="px-4 py-2 font-semibold">Address</div>
-                                            <div className="px-4 py-2">{currentLogin.address}</div>
+                                            <div className="px-4 py-2">{currentLogin?.address}</div>
                                         </div>
                                         <div className="grid grid-cols-2">
                                             <div className="px-4 py-2 font-semibold">Email.</div>
                                             <div className="px-4 py-2">
-                                                <a className="text-blue-800" href="mailto:jane@example.com">{currentLogin.email}</a>
+                                                <a className="text-blue-800" href="mailto:jane@example.com">{currentLogin?.email}</a>
                                             </div>
                                         </div>
 

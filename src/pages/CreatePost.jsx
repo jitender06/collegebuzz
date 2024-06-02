@@ -175,6 +175,7 @@ export default function CreatePost({icon}) {
             description: "",
             file: null
         });
+        setOpen(false);
     };
     const [open, setOpen] = React.useState(false);
 

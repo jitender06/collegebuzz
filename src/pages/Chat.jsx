@@ -1,7 +1,8 @@
 import React from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
-export default function Chat({currentLogin}) {
+import { Card } from '@mui/material';
+import GroupsIcon from '@mui/icons-material/Groups';
+export default function Chat({ currentLogin }) {
     return (
         <div className="flex h-screen antialiased text-gray-800">
             <div className="flex flex-row h-full w-full">
@@ -31,7 +32,7 @@ export default function Chat({currentLogin}) {
                         className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg"
                     >
                         <div className="h-20 w-20 rounded-full border overflow-hidden">
-                            <AccountCircleIcon sx={{fontSize:80}}/>
+                            <AccountCircleIcon sx={{ fontSize: 80 }} />
                             {/* <img
                                 src="https://avatars3.githubusercontent.com/u/2763884?s=128"
                                 alt="Avatar"
@@ -133,6 +134,7 @@ export default function Chat({currentLogin}) {
                         </div>
                     </div>
                 </div>
+
                 <div className="flex flex-col flex-auto h-full p-6">
                     <div
                         className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4"
@@ -404,7 +406,36 @@ export default function Chat({currentLogin}) {
                         </div>
                     </div>
                 </div>
+
+                <div className='flex flex-col py-8 pl-6 pr-2 w-96 bg-white flex-shrink-0'>
+                    <div className="ml-2 font-bold text-2xl">Trending Community</div>
+                    <Card sx={{py:"34px", px:"20px", mt:"10px", cursor:"pointer", display:"flex", alignItems:"center", gap:"20px", display:"flex", alignItems:"center", gap:"20px"}}>
+                        <GroupsIcon sx={{fontSize:"40px"}}/>
+                        <p>Exam Schedule</p>
+                    </Card>
+
+                    <Card sx={{py:"34px", px:"20px", mt:"10px", cursor:"pointer", display:"flex", alignItems:"center", gap:"20px"}}>
+                        <GroupsIcon sx={{fontSize:"40px"}}/>
+                        <p>Tech fest</p>
+                    </Card>
+
+                    <Card sx={{py:"34px", px:"20px", mt:"10px", cursor:"pointer", display:"flex", alignItems:"center", gap:"20px"}}>
+                        <GroupsIcon sx={{fontSize:"40px"}}/>
+                        <p>Sports Fest</p>
+                    </Card>
+
+                    <Card sx={{py:"34px", px:"20px", mt:"10px", cursor:"pointer", display:"flex", alignItems:"center", gap:"20px"}}>
+                        <GroupsIcon sx={{fontSize:"40px"}}/>
+                        <p>Cultural Fest</p>
+                    </Card>
+
+                    <Card sx={{py:"34px", px:"20px", mt:"10px", cursor:"pointer", display:"flex", alignItems:"center", gap:"20px"}}>
+                        <GroupsIcon sx={{fontSize:"40px"}}/>
+                        <p>Prajwalan</p>
+                    </Card>
+                </div>
+
             </div>
         </div>
-  )
+    )
 }

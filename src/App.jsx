@@ -23,6 +23,9 @@ function App() {
 
   const [isLogin, setIsLogin] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
+
+  const [post, setpost] = useState([])
+
   
   const [active, setActive] = useState("Home")
   const [currentLogin, setCurrentLogin] = useState();
@@ -34,12 +37,22 @@ function App() {
     console.log('User data not found in local storage')
   }
 
-  const allPosts = localStorage.getItem('post')
-  if (allPosts) {
-    var Posts = JSON.parse(allPosts)
-  } else {
-    console.log('post data not found in local storage')
-  }
+  // const allPosts = localStorage.getItem('post')
+  // if (allPosts) {
+  //   var Posts = JSON.parse(allPosts)
+  // } else {
+  //   console.log('post data not found in local storage')
+  // }
+
+  useEffect(() => {
+    const allPosts = localStorage.getItem('post')
+    if (allPosts) {
+      let Posts = JSON.parse(allPosts)
+      setpost(Posts)
+    } else {
+      console.log('post data not found in local storage')
+    }
+  },[post])
 
   // const location = useLocation();
 
@@ -58,9 +71,9 @@ function App() {
           <Route path="/" element={<Home setActive={setActive} isLogin={isLogin}/>}/>
           <Route path="/login" element={<Login setIsAdmin={setIsAdmin} allUsersData={userData} isLogin={isLogin} setIsLogin={setIsLogin} setActive={setActive} setCurrentLogin={setCurrentLogin}/>}/>
           <Route path="/register" element={<Register setActive={setActive}/>}/>
-          <Route path="/feeds" element={<PostFeeds Posts={Posts} setActive={setActive}/>}/>
+          <Route path="/feeds" element={<PostFeeds Posts={post} setActive={setActive}/>}/>
           <Route path="/create-post" element={<CreatePost/>}/>
-          <Route path="/chat" element={<SocialMedia Posts={Posts} setActive={setActive} setIsLogin={setIsLogin} currentLogin={currentLogin}/>}/>
+          <Route path="/chat" element={<SocialMedia Posts={post} setActive={setActive} setIsLogin={setIsLogin} currentLogin={currentLogin}/>}/>
           <Route path="/profile" element={<Profile currentLogin={currentLogin}/>}/>
           <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/message" element={<Chat currentLogin={currentLogin}/>}/>

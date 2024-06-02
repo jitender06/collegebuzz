@@ -4,6 +4,7 @@ import HomeVideo from '../assets/home.mp4'
 import Faq from './Faq'
 import Contact from './Contact/Contact'
 import Logo from '../assets/logo.png'
+import Team from './Team'
 
 export default function Home({setActive, isLogin}) {
     return (
@@ -81,6 +82,7 @@ export default function Home({setActive, isLogin}) {
             </div>
             <Faq/>
             <Contact/>
+            <Team/>
             {/* <!-- End Hero --> */}
         </>
     )
